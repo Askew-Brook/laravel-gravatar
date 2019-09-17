@@ -1,8 +1,8 @@
 <?php
 
-namespace Thomaswelton\Tests\LaravelGravatar;
+namespace Askewbrook\Tests\LaravelGravatar;
 
-use Thomaswelton\LaravelGravatar\Gravatar;
+use Askewbrook\LaravelGravatar\Gravatar;
 use Mockery as m;
 use PHPUnit_Framework_TestCase;
 

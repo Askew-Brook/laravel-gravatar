@@ -1,6 +1,6 @@
 <?php
 
-namespace Thomaswelton\LaravelGravatar;
+namespace Askewbrook\LaravelGravatar;
 
 use Illuminate\Support\ServiceProvider;
 

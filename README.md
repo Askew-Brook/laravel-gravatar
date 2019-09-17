@@ -15,13 +15,13 @@ Update your `composer.json` file to include this package as a dependency
 
 Register the Gravatar service provider by adding it to the providers array in the `config/app.php` file.
 ```php
-Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class
+Askewbrook\LaravelGravatar\LaravelGravatarServiceProvider::class
 ```
 
 Alias the Gravatar facade by adding it to the aliases array in the `config/app.php` file.
 ```php
 'aliases' => [
-     'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class
+     'Gravatar' => Askewbrook\LaravelGravatar\Facades\Gravatar::class
 ]
 ```
 
@@ -29,7 +29,7 @@ Alias the Gravatar facade by adding it to the aliases array in the `config/app.p
 
 Copy the config file into your project by running
 ```
-php artisan vendor:publish --provider="Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider"
+php artisan vendor:publish --provider="Askewbrook\LaravelGravatar\LaravelGravatarServiceProvider"
 ```
 
 ### Default Image

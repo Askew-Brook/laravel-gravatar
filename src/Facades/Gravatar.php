@@ -1,6 +1,6 @@
 <?php
 
-namespace Thomaswelton\LaravelGravatar\Facades;
+namespace Askewbrook\LaravelGravatar\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

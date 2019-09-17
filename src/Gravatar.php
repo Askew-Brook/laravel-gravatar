@@ -1,6 +1,6 @@
 <?php
 
-namespace Thomaswelton\LaravelGravatar;
+namespace Askewbrook\LaravelGravatar;
 
 use Illuminate\Contracts\Config\Repository as Config;
 use thomaswelton\GravatarLib\Gravatar as GravatarLib;
@@ -10,7 +10,7 @@ class Gravatar extends GravatarLib
     /**
      * The maximum size allowed for the Gravatar.
      */
-    const MAX_SIZE = 512;
+    public const MAX_SIZE = 512;
 
     /**
      * The default size of the Gravatar.
@@ -40,7 +40,7 @@ class Gravatar extends GravatarLib
      */
     public function src($email, $size = null, $rating = null)
     {
-        if (is_null($size)) {
+        if ($size === null) {
             $size = $this->defaultSize;
         }
 
@@ -48,7 +48,7 @@ class Gravatar extends GravatarLib
 
         $this->setAvatarSize($size);
 
-        if (!is_null($rating)) {
+        if ($rating !== null) {
             $this->setMaxRating($rating);
         }
 
@@ -106,7 +106,7 @@ class Gravatar extends GravatarLib
         $url = $this->buildGravatarURL($email);
         $headers = get_headers($url, 1);
 
-        return substr($headers[0], 9, 3) == '200';
+        return substr($headers[0], 9, 3) === '200';
     }
 
     /**
